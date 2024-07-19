@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <title>Halaman Utama</title>
+  </head>
+  <body>
+    <h1>Selamat Datang di Sistem Deteksi Kebakaran</h1>
+    <p><a href="http://127.0.0.1:5000/upload">Unggah Gambar atau Video</a></p>
+    
+    <h2>Gambar Deteksi</h2>
+    {% if images %}
+      <ul>
+        {% for image in images %}
+          <li>
+            <h3>{{ image }}</h3>
+            <img src="http://127.0.0.1:5000/upload/gambar" alt="{{ image }}" style="width:400px;">
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Tidak ada gambar deteksi saat ini.</p>
+    {% endif %}
+
+    <h2>Video Deteksi</h2>
+    {% if videos %}
+      <ul>
+        {% for video in videos %}
+          <li>
+            <h3>{{ video }}</h3>
+            <video width="400" controls>
+              <source src="http://127.0.0.1:5000//detections/gambar" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Tidak ada video deteksi saat ini.</p>
+    {% endif %}
+  </body>
+</html>

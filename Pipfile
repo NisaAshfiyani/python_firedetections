@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+opencv-python = "*"
+ultralytics = "*"
+flask-restx = "*"
+mysql-connector-python = "*"
+pywhatkit = "*"
+pyautogui = "*"
+python-telegram-bot = "*"
+pillow = "*"
+pytelegrambotapi = "*"
+requests = "*"
+twilio = "*"
+playsound = "*"
+pygame = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
